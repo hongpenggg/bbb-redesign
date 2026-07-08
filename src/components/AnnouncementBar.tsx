@@ -6,14 +6,20 @@ export function AnnouncementBar() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('bbb-announcement-dismissed');
-    if (!dismissed) {
+    try {
+      const dismissed = localStorage.getItem('bbb-announcement-dismissed');
+      if (!dismissed) setVisible(true);
+    } catch {
       setVisible(true);
     }
   }, []);
 
   const handleClose = () => {
-    localStorage.setItem('bbb-announcement-dismissed', Date.now().toString());
+    try {
+      localStorage.setItem('bbb-announcement-dismissed', Date.now().toString());
+    } catch {
+      // ignore
+    }
     setVisible(false);
   };
 
