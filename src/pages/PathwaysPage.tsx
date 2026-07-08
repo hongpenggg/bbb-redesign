@@ -217,11 +217,12 @@ export function PathwaysPage() {
                   </div>
                 ))}
               </div>
-              <Link to="/apply">
-                <button className="w-full mt-4 md:mt-6 bg-primary text-on-primary font-label font-bold py-3 md:py-3.5 px-4 wiggly-border hard-shadow-sm hover-wiggle flex items-center justify-center gap-2 text-[13px] md:text-[14px]">
-                  Start Application
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+              <Link
+                to="/apply"
+                className="w-full mt-4 md:mt-6 bg-primary text-on-primary font-label font-bold py-3 md:py-3.5 px-4 wiggly-border hard-shadow-sm hover-wiggle flex items-center justify-center gap-2 text-[13px] md:text-[14px]"
+              >
+                Start Application
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -233,7 +234,7 @@ export function PathwaysPage() {
                 <div>
                   <h4 className="text-[20px] md:text-[24px] font-display font-bold text-ink-black">Free</h4>
                   <p className="text-[12px] md:text-[13px] text-on-surface-variant mt-1 leading-snug">
-                    Our curriculum is completely free for all youths aged 13\u201318 who are passionate about learning to code.
+                    Our curriculum is completely free for all youths aged 13–18 who are passionate about learning to code.
                   </p>
                 </div>
               </div>
