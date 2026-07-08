@@ -47,7 +47,7 @@ export function NotFoundPage() {
           />
           {/* Wiggly underline */}
           <path
-            d="M60 140 C80 135 90 145 100 140 C110 135 130 145 140 140"
+            d="M60 145 C75 140 85 150 100 145 C115 140 125 150 140 145"
             stroke="#C5FF52"
             strokeWidth="4"
             strokeLinecap="round"
