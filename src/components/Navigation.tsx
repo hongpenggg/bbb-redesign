@@ -29,15 +29,16 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-surface border-b-2 border-ink-black transition-shadow duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 bg-surface border-b-2 border-ink-black transition-shadow duration-300 ${
         scrolled ? 'shadow-hard-sm' : 'shadow-none'
       }`}
     >
-      <div className="flex justify-between items-center px-6 py-4 max-w-container mx-auto">
+      <div className="flex justify-between items-center px-4 sm:px-6 py-4 max-w-container mx-auto">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 font-display text-headline-md font-bold text-ink-black hover-wiggle">
+        <Link to="/" className="flex items-center gap-2 font-display text-[18px] sm:text-headline-md font-bold text-ink-black hover-wiggle">
           <Code2 className="w-6 h-6 text-primary" />
-          Bit by Bit Coding
+          <span className="hidden sm:inline">Bit by Bit Coding</span>
+          <span className="sm:hidden">BbB Coding</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -58,19 +59,20 @@ export function Navigation() {
         </div>
 
         {/* Right side */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 md:gap-4">
           <Link
             to="/apply"
-            className="bg-primary-container text-ink-black font-label font-bold text-[14px] px-6 py-2 wiggly-border hard-shadow hover-wiggle hidden sm:block"
+            className="bg-primary-container text-ink-black font-label font-bold text-[13px] md:text-[14px] px-4 md:px-6 py-2 wiggly-border hard-shadow hover-wiggle hidden sm:block"
           >
             Apply Now
           </Link>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-ink-black hover:text-primary transition-colors"
+            className="md:hidden text-ink-black hover:text-primary transition-colors p-1"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -79,13 +81,13 @@ export function Navigation() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-surface border-t-2 border-ink-black">
-          <div className="flex flex-col px-6 py-4 gap-4">
+        <div className="md:hidden bg-surface border-t-2 border-ink-black absolute left-0 right-0 shadow-hard-sm">
+          <div className="flex flex-col px-4 sm:px-6 py-4 gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-label text-[14px] font-bold py-2 border-b border-ink-black/10 ${
+                className={`font-label text-[15px] md:text-[16px] font-bold py-3 border-b border-ink-black/10 last:border-0 ${
                   location.pathname === link.path ? 'text-primary' : 'text-ink-black'
                 }`}
               >
@@ -94,7 +96,7 @@ export function Navigation() {
             ))}
             <Link
               to="/apply"
-              className="bg-primary text-on-primary font-label font-bold text-[14px] px-6 py-3 wiggly-border text-center mt-2"
+              className="bg-primary text-on-primary font-label font-bold text-[14px] px-6 py-3 wiggly-border text-center mt-3"
             >
               Apply Now
             </Link>

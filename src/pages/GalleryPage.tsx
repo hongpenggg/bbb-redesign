@@ -32,30 +32,38 @@ const eventImages = [
 
 const assetBase = 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets';
 
+function formatAlt(image: string) {
+  return image
+    .replace(/_/g, ' ')
+    .replace('.jpeg', '')
+    .replace('term1', 'Term 1')
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
 export function GalleryPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="flex flex-col items-center text-center gap-6 py-16 px-6 max-w-container mx-auto">
-        <h1 className="font-display text-[36px] md:text-[48px] text-ink-black leading-tight">
+      <section className="flex flex-col items-center text-center gap-4 md:gap-6 py-12 md:py-16 px-4 sm:px-6 max-w-container mx-auto">
+        <h1 className="font-display text-[28px] sm:text-[36px] md:text-[48px] text-ink-black leading-tight">
           Event <span className="drawn-underline text-primary">Gallery</span>
         </h1>
-        <p className="text-on-surface-variant text-[18px] max-w-2xl leading-relaxed">
+        <p className="text-on-surface-variant text-[16px] md:text-[18px] max-w-2xl leading-relaxed px-2 sm:px-0">
           Snapshots from past BbB workshops, bootcamps, and mentoring sessions.
         </p>
       </section>
 
       {/* Masonry Grid */}
-      <section className="px-6 pb-20 max-w-container mx-auto">
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-          {eventImages.map((image, i) => (
+      <section className="px-4 sm:px-6 pb-16 md:pb-20 max-w-container mx-auto">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 md:gap-4 space-y-3 md:space-y-4">
+          {eventImages.map((image) => (
             <div
               key={image}
               className="break-inside-avoid wiggly-border hard-shadow hover-wiggle overflow-hidden"
             >
               <img
                 src={`${assetBase}/${image}`}
-                alt={image.replace(/_/g, ' ').replace('.jpeg', '').replace('term1', 'Term 1').replace(/\b\w/g, (c) => c.toUpperCase())}
+                alt={formatAlt(image)}
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />

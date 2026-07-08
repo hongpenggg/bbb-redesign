@@ -9,8 +9,8 @@ export function AnnouncementBar() {
 
   return (
     <div className="bg-primary text-on-primary relative z-50">
-      <div className="max-w-container mx-auto px-6 py-3 flex items-center justify-center gap-3 text-[14px] font-label font-bold">
-        <Sparkles className="w-4 h-4 text-bit-green flex-shrink-0" />
+      <div className="max-w-container mx-auto px-4 sm:px-6 py-2.5 md:py-3 flex items-center justify-center gap-2 md:gap-3 text-[12px] md:text-[14px] font-label font-bold">
+        <Sparkles className="w-3.5 h-3.5 md:w-4 md:h-4 text-bit-green flex-shrink-0" />
         <span className="text-center">
           🎉 Second 12-week Python course sign-ups are open!{' '}
           <Link to="/apply" className="underline text-bit-green hover:text-bit-green/80 ml-1">
@@ -19,7 +19,7 @@ export function AnnouncementBar() {
         </span>
         <button
           onClick={() => setVisible(false)}
-          className="absolute right-4 top-1/2 -translate-y-1/2 text-on-primary/70 hover:text-on-primary transition-colors"
+          className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 text-on-primary/70 hover:text-on-primary transition-colors"
           aria-label="Close announcement"
         >
           <X className="w-4 h-4" />

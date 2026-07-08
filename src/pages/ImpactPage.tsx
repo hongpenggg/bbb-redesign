@@ -29,56 +29,56 @@ export function ImpactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="flex flex-col items-center text-center gap-6 py-16 px-6 max-w-container mx-auto">
-        <h1 className="font-display text-[36px] md:text-[48px] text-ink-black leading-tight">
+      <section className="flex flex-col items-center text-center gap-4 md:gap-6 py-12 md:py-16 px-4 sm:px-6 max-w-container mx-auto">
+        <h1 className="font-display text-[28px] sm:text-[36px] md:text-[48px] text-ink-black leading-tight">
           Our <span className="drawn-underline text-primary">Impact</span>
         </h1>
-        <p className="text-on-surface-variant text-[18px] max-w-2xl leading-relaxed">
+        <p className="text-on-surface-variant text-[16px] md:text-[18px] max-w-2xl leading-relaxed px-2 sm:px-0">
           Measurable outcomes from our March 2026 cohort. Every number represents a student
           whose life we&apos;re working to change through coding education.
         </p>
       </section>
 
       {/* Stats Grid */}
-      <section className="py-16 px-6 bg-surface-container border-y-2 border-ink-black/10">
-        <div className="max-w-container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-12 md:py-16 px-4 sm:px-6 bg-surface-container border-y-2 border-ink-black/10">
+        <div className="max-w-container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {impactStats.map((stat, i) => (
             <div
               key={i}
-              className={`bg-surface p-8 wiggly-border hard-shadow hover-wiggle transform ${
+              className={`bg-surface p-6 md:p-8 wiggly-border hard-shadow hover-wiggle transform ${
                 i % 3 === 0 ? '-rotate-1' : i % 3 === 1 ? 'rotate-1' : '-rotate-1'
               }`}
             >
-              <div className={`w-12 h-12 ${stat.color} wiggly-border-thin flex items-center justify-center mb-4`}>
-                <stat.icon className="w-6 h-6 text-on-primary" />
+              <div className={`w-10 h-10 md:w-12 md:h-12 ${stat.color} wiggly-border-thin flex items-center justify-center mb-4`}>
+                <stat.icon className="w-5 h-5 md:w-6 md:h-6 text-on-primary" />
               </div>
-              <div className="font-display text-[36px] font-bold text-ink-black mb-1">{stat.number}</div>
-              <div className="font-display text-[18px] font-bold text-ink-black mb-2">{stat.label}</div>
-              <p className="text-on-surface-variant text-[13px] leading-relaxed">{stat.description}</p>
+              <div className="font-display text-[28px] sm:text-[32px] md:text-[36px] font-bold text-ink-black mb-1">{stat.number}</div>
+              <div className="font-display text-[16px] md:text-[18px] font-bold text-ink-black mb-2">{stat.label}</div>
+              <p className="text-on-surface-variant text-[12px] md:text-[13px] leading-relaxed">{stat.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Milestones */}
-      <section className="py-20 px-6">
+      <section className="py-14 md:py-20 px-4 sm:px-6">
         <div className="max-w-container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-headline-lg text-ink-black">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="font-display text-[24px] md:text-headline-lg text-ink-black">
               Our Journey
             </h2>
           </div>
           <div className="relative max-w-3xl mx-auto">
-            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-surface-dim hidden md:block" />
+            <div className="absolute left-5 md:left-6 top-0 bottom-0 w-0.5 bg-surface-dim hidden sm:block" />
             {milestones.map((m, i) => (
-              <div key={i} className="relative flex gap-6 mb-8 md:pl-16">
-                <div className="hidden md:flex absolute left-0 top-1 w-12 h-12 bg-primary wiggly-border-thin items-center justify-center z-10">
-                  <span className="text-on-primary font-label font-bold text-[12px]">{i + 1}</span>
+              <div key={i} className="relative flex gap-4 md:gap-6 mb-6 md:mb-8 sm:pl-14 md:pl-16">
+                <div className="hidden sm:flex absolute left-0 top-1 w-10 h-10 md:w-12 md:h-12 bg-primary wiggly-border-thin items-center justify-center z-10">
+                  <span className="text-on-primary font-label font-bold text-[11px] md:text-[12px]">{i + 1}</span>
                 </div>
-                <div className="bg-surface p-6 wiggly-border hard-shadow hover-wiggle flex-1">
-                  <span className="text-primary text-[12px] font-label font-bold uppercase tracking-wider">{m.date}</span>
-                  <h3 className="font-display text-[18px] font-bold text-ink-black mt-1 mb-2">{m.event}</h3>
-                  <p className="text-on-surface-variant text-[14px] leading-relaxed">{m.description}</p>
+                <div className="bg-surface p-5 md:p-6 wiggly-border hard-shadow hover-wiggle flex-1">
+                  <span className="text-primary text-[11px] md:text-[12px] font-label font-bold uppercase tracking-wider">{m.date}</span>
+                  <h3 className="font-display text-[16px] md:text-[18px] font-bold text-ink-black mt-1 mb-2">{m.event}</h3>
+                  <p className="text-on-surface-variant text-[13px] md:text-[14px] leading-relaxed">{m.description}</p>
                 </div>
               </div>
             ))}
@@ -87,24 +87,24 @@ export function ImpactPage() {
       </section>
 
       {/* Bento Grid */}
-      <section className="py-20 px-6 bg-surface-container-low border-y-2 border-ink-black/10">
+      <section className="py-14 md:py-20 px-4 sm:px-6 bg-surface-container-low border-y-2 border-ink-black/10">
         <div className="max-w-container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-headline-lg text-ink-black">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="font-display text-[24px] md:text-headline-lg text-ink-black">
               What Makes Us Different
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
             {bentoItems.map((item, i) => (
               <div
                 key={i}
-                className={`${item.color} p-8 wiggly-border hard-shadow hover-wiggle transform ${
+                className={`${item.color} p-6 md:p-8 wiggly-border hard-shadow hover-wiggle transform ${
                   i % 3 === 0 ? '-rotate-1' : i % 3 === 2 ? 'rotate-1' : ''
-                } ${item.size === 'large' ? 'md:col-span-2' : ''}`}
+                } ${item.size === 'large' ? 'lg:col-span-2' : ''}`}
               >
-                <item.icon className="w-8 h-8 text-primary mb-4" />
-                <h3 className="font-display text-[20px] font-bold text-ink-black mb-2">{item.title}</h3>
-                <p className="text-on-surface-variant text-[14px] leading-relaxed">{item.description}</p>
+                <item.icon className="w-7 h-7 md:w-8 md:h-8 text-primary mb-4" />
+                <h3 className="font-display text-[18px] md:text-[20px] font-bold text-ink-black mb-2">{item.title}</h3>
+                <p className="text-on-surface-variant text-[13px] md:text-[14px] leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>

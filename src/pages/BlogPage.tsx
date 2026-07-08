@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react';
 import { Calendar, Clock, ArrowRight, Search } from 'lucide-react';
 
+const assetBase = 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets';
+
 const blogPosts = [
   {
     id: 'why-we-founded-bit-by-bit',
@@ -11,7 +13,7 @@ const blogPosts = [
     readTime: '8 min read',
     category: 'Opinion',
     tags: ['#student-stories', '#equity', '#events'],
-    image: 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets/bootcamp_photo.jpeg',
+    image: `${assetBase}/bootcamp_photo.jpeg`,
   },
   {
     id: 'march-2026-bootcamp-recap',
@@ -22,7 +24,7 @@ const blogPosts = [
     readTime: '5 min read',
     category: 'Events',
     tags: ['#bootcamp', '#events'],
-    image: 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets/wework_class_term1.jpeg',
+    image: `${assetBase}/wework_class_term1.jpeg`,
   },
   {
     id: 'teaching-python-to-beginners',
@@ -33,7 +35,7 @@ const blogPosts = [
     readTime: '6 min read',
     category: 'Curriculum',
     tags: ['#curriculum', '#python', '#teaching'],
-    image: 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets/kevin_teaching.jpeg',
+    image: `${assetBase}/kevin_teaching.jpeg`,
   },
 ];
 
@@ -59,22 +61,22 @@ export function BlogPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="flex flex-col items-center text-center gap-6 py-16 px-6 max-w-container mx-auto">
+      <section className="flex flex-col items-center text-center gap-4 md:gap-6 py-12 md:py-16 px-4 sm:px-6 max-w-container mx-auto">
         <div className="inline-flex items-center gap-2 px-4 py-2 wiggly-border-thin font-label font-bold text-[12px] text-primary uppercase tracking-wider">
           <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse" />
           Stories & Insights
         </div>
-        <h1 className="font-display text-[36px] md:text-[48px] text-ink-black leading-tight">
+        <h1 className="font-display text-[28px] sm:text-[36px] md:text-[48px] text-ink-black leading-tight">
           Our <span className="text-primary">Blog</span>
         </h1>
-        <p className="text-on-surface-variant text-[18px] max-w-2xl leading-relaxed">
+        <p className="text-on-surface-variant text-[16px] md:text-[18px] max-w-2xl leading-relaxed px-2 sm:px-0">
           Thoughts on coding education, equity, and building a community that learns together.
         </p>
       </section>
 
       {/* Filter Bar */}
-      <section className="px-6 pb-8 max-w-container mx-auto w-full">
-        <div className="bg-surface p-5 wiggly-border hard-shadow">
+      <section className="px-4 sm:px-6 pb-6 md:pb-8 max-w-container mx-auto w-full">
+        <div className="bg-surface p-4 md:p-5 wiggly-border hard-shadow">
           <div className="relative mb-4">
             <Search className="w-4 h-4 text-on-surface-variant absolute left-3 top-1/2 -translate-y-1/2" />
             <input
@@ -105,8 +107,8 @@ export function BlogPage() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="px-6 pb-20 max-w-container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="px-4 sm:px-6 pb-16 md:pb-20 max-w-container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {filteredPosts.map((post, i) => (
             <article
               key={post.id}
@@ -114,7 +116,7 @@ export function BlogPage() {
                 i % 3 === 0 ? 'rotate-1' : i % 3 === 2 ? '-rotate-1' : ''
               }`}
             >
-              <div className="relative h-48 overflow-hidden bg-primary-fixed-dim">
+              <div className="relative h-44 sm:h-48 overflow-hidden bg-primary-fixed-dim">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -126,15 +128,15 @@ export function BlogPage() {
                   </span>
                 </div>
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="font-display text-[18px] font-bold text-ink-black mb-2 hover:text-primary transition-colors">
+              <div className="p-5 md:p-6 flex flex-col flex-grow">
+                <h3 className="font-display text-[16px] md:text-[18px] font-bold text-ink-black mb-2 hover:text-primary transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-on-surface-variant text-[13px] mb-4 flex-grow line-clamp-3 leading-relaxed">
+                <p className="text-on-surface-variant text-[12px] md:text-[13px] mb-4 flex-grow line-clamp-3 leading-relaxed">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center justify-between text-[12px] text-on-surface-variant pt-4 border-t-2 border-dashed border-ink-black/10">
-                  <div className="flex items-center gap-3 font-label">
+                <div className="flex items-center justify-between text-[11px] md:text-[12px] text-on-surface-variant pt-4 border-t-2 border-dashed border-ink-black/10">
+                  <div className="flex items-center gap-2 md:gap-3 font-label">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
                       <span>{post.date}</span>
