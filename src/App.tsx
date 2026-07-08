@@ -37,7 +37,7 @@ export default function App() {
       <div className="min-h-screen flex flex-col bg-surface text-on-surface">
         <AnnouncementBar />
         <Navigation />
-        <main className="flex-grow pt-[72px]">
+        <main className="flex-grow">
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<HomePage />} />

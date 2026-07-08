@@ -29,7 +29,7 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-surface border-b-2 border-ink-black transition-shadow duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 bg-surface border-b-2 border-ink-black transition-shadow duration-300 ${
         scrolled ? 'shadow-hard-sm' : 'shadow-none'
       }`}
     >
