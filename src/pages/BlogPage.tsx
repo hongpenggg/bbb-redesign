@@ -43,11 +43,6 @@ export function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const allTags = useMemo(() => {
-    const tags = blogPosts.flatMap((post) => post.tags);
-    return ['all', ...Array.from(new Set(tags))];
-  }, []);
-
   const filteredPosts = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
     return blogPosts.filter((post) => {
@@ -87,6 +82,7 @@ export function BlogPage() {
               value={searchTerm}
               onChange={(event) => setSearchTerm(event.target.value)}
               placeholder="Search blog posts..."
+              aria-label="Search blog posts"
               className="w-full wiggly-border-thin bg-surface-container-low pl-10 pr-3 py-2.5 text-[14px] text-ink-black focus:outline-none focus:border-2 focus:border-primary font-label"
             />
           </div>

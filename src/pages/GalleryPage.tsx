@@ -55,7 +55,7 @@ export function GalleryPage() {
             >
               <img
                 src={`${assetBase}/${image}`}
-                alt="Bit by Bit event"
+                alt={image.replace(/_/g, ' ').replace('.jpeg', '').replace('term1', 'Term 1').replace(/\b\w/g, (c) => c.toUpperCase())}
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />

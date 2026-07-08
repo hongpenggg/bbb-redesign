@@ -88,11 +88,6 @@
     transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  .wiggle-hover:hover {
-    transform: rotate(1deg) scale(1.02);
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
   .float-anim {
     animation: float 4s ease-in-out infinite;
   }

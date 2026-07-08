@@ -16,7 +16,7 @@ export function NotFoundPage() {
         >
           {/* Hand-drawn circle */}
           <path
-            d="M100 20C144 20 180 56 180 100C180 144 144 180 100 180C56 180 20 144 20 100C20 56 56 20 100 20Z"
+            d="M100 20 C144 20 180 56 180 100 C180 144 144 180 100 180 C56 180 20 144 20 100 C20 56 56 20 100 20 Z"
             stroke="#1A1A1A"
             strokeWidth="3"
             strokeLinecap="round"
@@ -47,7 +47,7 @@ export function NotFoundPage() {
           />
           {/* Wiggly underline */}
           <path
-            d="M60 140C80 135 120 145 140 140"
+            d="M60 140 C80 135 120 145 140 140"
             stroke="#C5FF52"
             strokeWidth="4"
             strokeLinecap="round"

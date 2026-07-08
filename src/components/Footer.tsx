@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Code2, Instagram, Github } from 'lucide-react';
+import { Code2, Instagram, Github, Linkedin, Twitter } from 'lucide-react';
 
 const footerLinks = [
   {
@@ -60,6 +60,22 @@ export function Footer() {
                 className="w-10 h-10 wiggly-border hard-shadow-sm flex items-center justify-center text-ink-black hover:text-primary hover-wiggle transition-colors"
               >
                 <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://linkedin.com/company/bitbybitcoding"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 wiggly-border hard-shadow-sm flex items-center justify-center text-ink-black hover:text-primary hover-wiggle transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href="https://twitter.com/bbbcoding"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 wiggly-border hard-shadow-sm flex items-center justify-center text-ink-black hover:text-primary hover-wiggle transition-colors"
+              >
+                <Twitter className="w-4 h-4" />
               </a>
             </div>
           </div>

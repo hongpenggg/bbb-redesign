@@ -51,7 +51,7 @@ export function ContactPage() {
 
   return (
     <div className="flex flex-col">
-      <main className="flex-grow py-16 px-6">
+      <section className="py-16 px-6">
         <div className="max-w-container mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
@@ -149,7 +149,7 @@ export function ContactPage() {
             </div>
           </div>
         </div>
-      </main>
+      </section>
     </div>
   );
 }

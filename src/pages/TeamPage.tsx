@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Code2 } from 'lucide-react';
 
 const teamMembers = [
@@ -78,12 +79,12 @@ export function TeamPage() {
             <p className="text-on-surface-variant text-[16px] max-w-xl mx-auto mb-8 relative z-10">
               We&apos;re always looking for passionate volunteers who want to make a difference in youth coding education.
             </p>
-            <a
-              href="/tutor"
+            <Link
+              to="/tutor"
               className="relative z-10 inline-flex items-center gap-2 bg-primary text-on-primary font-label font-bold text-[14px] px-8 py-4 wiggly-border hard-shadow hover-wiggle"
             >
               Become a Tutor
-            </a>
+            </Link>
           </div>
         </div>
       </section>

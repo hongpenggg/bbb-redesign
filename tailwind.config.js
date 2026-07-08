@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class",
+
   theme: {
     extend: {
       colors: {
@@ -47,6 +47,10 @@ export default {
         display: ['"Playfair Display"', 'serif'],
         body: ['"Atkinson Hyperlegible Next"', 'sans-serif'],
         label: ['"Atkinson Hyperlegible Next"', 'sans-serif'],
+      },
+      fontSize: {
+        'headline-lg': ['2.5rem', { lineHeight: '1.2', fontWeight: '600' }],
+        'headline-md': ['1.5rem', { lineHeight: '1.3', fontWeight: '600' }],
       },
       maxWidth: {
         'container': '1200px',

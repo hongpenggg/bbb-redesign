@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { HeartHandshake, Route, Users, Info } from 'lucide-react';
+import { useTallyEmbed } from '../hooks/useTallyEmbed';
 
 const benefits = [
   {
@@ -20,32 +20,11 @@ const benefits = [
 ];
 
 export function ApplicationPage() {
-  useEffect(() => {
-    const existingScript = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.src = 'https://tally.so/widgets/embed.js';
-      script.async = true;
-      script.onload = () => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const w = window as any;
-        if (w.Tally?.loadEmbeds) {
-          w.Tally.loadEmbeds();
-        }
-      };
-      document.body.appendChild(script);
-    } else {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const w = window as any;
-      if (w.Tally?.loadEmbeds) {
-        w.Tally.loadEmbeds();
-      }
-    }
-  }, []);
+  useTallyEmbed();
 
   return (
     <div className="flex flex-col min-h-screen">
-      <main className="flex-grow flex items-center justify-center p-4 md:p-8 lg:p-12">
+      <div className="flex-grow flex items-center justify-center p-4 md:p-8 lg:p-12">
         <div className="w-full max-w-6xl min-h-[650px] bg-surface wiggly-border hard-shadow-lg grid lg:grid-cols-12 overflow-hidden relative">
           {/* Left Column - Tally Form */}
           <div className="lg:col-span-7 p-6 md:p-10 lg:p-12 flex flex-col relative bg-surface">
@@ -109,7 +88,7 @@ export function ApplicationPage() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 }

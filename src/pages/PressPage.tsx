@@ -133,10 +133,10 @@ export function PressPage() {
                     {asset.format}
                   </span>
                 </div>
-                <button className="mt-auto flex items-center gap-2 text-primary font-label font-bold text-[13px] hover:underline">
+                <span className="mt-auto flex items-center gap-2 text-on-surface-variant font-label font-bold text-[13px] opacity-60 cursor-not-allowed">
                   <Download className="w-4 h-4" />
-                  Download
-                </button>
+                  Coming Soon
+                </span>
               </div>
             ))}
           </div>
