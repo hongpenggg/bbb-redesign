@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { HelpCircle, ChevronDown, Users, BookOpen, Shield, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -137,7 +137,6 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
 }
 
 export function FAQPage() {
-  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="flex flex-col">

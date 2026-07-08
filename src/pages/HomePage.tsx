@@ -77,7 +77,7 @@ export function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center px-4 sm:px-6 py-12 md:py-16 lg:py-24 max-w-container mx-auto">
+      <section className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center px-4 sm:px-6 py-12 md:py-16 lg:py-24 max-w-container mx-auto">
         {/* Floating blob decoration */}
         <div className="absolute top-32 right-10 w-48 h-48 md:w-64 md:h-64 bg-bit-green/20 organic-blob-1 animate-float pointer-events-none hidden lg:block" />
 

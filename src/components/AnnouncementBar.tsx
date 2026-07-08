@@ -1,9 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { X, Sparkles } from 'lucide-react';
 
 export function AnnouncementBar() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    try {
+      const dismissed = localStorage.getItem('bbb-announcement-dismissed');
+      if (!dismissed) setVisible(true);
+    } catch {
+      setVisible(true);
+    }
+  }, []);
+
+  const handleClose = () => {
+    try {
+      localStorage.setItem('bbb-announcement-dismissed', Date.now().toString());
+    } catch {
+      // ignore
+    }
+    setVisible(false);
+  };
 
   if (!visible) return null;
 
@@ -18,7 +36,7 @@ export function AnnouncementBar() {
           </Link>
         </span>
         <button
-          onClick={() => setVisible(false)}
+          onClick={handleClose}
           className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 text-on-primary/70 hover:text-on-primary transition-colors"
           aria-label="Close announcement"
         >

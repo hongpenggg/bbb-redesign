@@ -77,7 +77,7 @@ export function TutorPage() {
           Tutor With <span className="drawn-underline text-primary">Us</span>
         </h1>
         <p className="text-on-surface-variant text-[16px] md:text-[18px] max-w-2xl leading-relaxed px-2 sm:px-0">
-          Share your passion for coding with the next generation. No teaching experience required \u2014
+          Share your passion for coding with the next generation. No teaching experience required —
           just enthusiasm and a willingness to make a difference.
         </p>
         <a
@@ -142,7 +142,7 @@ export function TutorPage() {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-bit-green wiggly-border-thin flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-ink-black font-bold text-[12px]">\u2713</span>
+                      <span className="text-ink-black font-bold text-[12px]">✓</span>
                     </div>
                     <span className="text-on-surface-variant text-[14px] md:text-[15px] leading-relaxed">
                       {item}
