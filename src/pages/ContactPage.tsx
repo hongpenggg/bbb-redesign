@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { Mail, MessageSquare, Phone } from 'lucide-react';
+import { useTallyEmbed } from '../hooks/useTallyEmbed';
 
 const contactInfo = [
   {
@@ -26,28 +26,7 @@ const contactInfo = [
 ];
 
 export function ContactPage() {
-  useEffect(() => {
-    const existingScript = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.src = 'https://tally.so/widgets/embed.js';
-      script.async = true;
-      script.onload = () => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const w = window as any;
-        if (w.Tally?.loadEmbeds) {
-          w.Tally.loadEmbeds();
-        }
-      };
-      document.body.appendChild(script);
-    } else {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const w = window as any;
-      if (w.Tally?.loadEmbeds) {
-        w.Tally.loadEmbeds();
-      }
-    }
-  }, []);
+  useTallyEmbed();
 
   return (
     <div className="flex flex-col">
