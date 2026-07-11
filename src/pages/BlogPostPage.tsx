@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, ExternalLink } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, type ReactNode } from 'react';
 
 const assetBase = '/assets';
 
@@ -13,7 +13,7 @@ interface BlogPost {
   readTime: string;
   category: string;
   image: string;
-  content: React.ReactNode;
+  content: ReactNode;
 }
 
 const blogPosts: Record<string, BlogPost> = {
