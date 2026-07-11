@@ -171,11 +171,9 @@ rounded-sketch        → 255px 15px 225px 15px/15px 225px 15px 255px
 
 ### Images
 
-- All BBB event/class photos are hosted on GitHub and must be referenced as:
-  ```
-  https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets/<filename>
-  ```
-- Do not download or bundle images locally.
+- All BBB event/class photos are stored locally in `public/assets/` as `.webp` files.
+- Reference them using the path prefix `/assets/<filename>.webp` in `src` / `alt` attributes.
+- The `assetBase` constant pattern is used in page components: `const assetBase = '/assets';`
 - Use `alt` attributes on every `<img>` tag.
 
 ### External Forms
@@ -230,6 +228,7 @@ rounded-sketch        → 255px 15px 225px 15px/15px 225px 15px 255px
 | Team            | `/team`      | `TeamPage.tsx`           | ✅ Built        |
 | Impact          | `/impact`    | `ImpactPage.tsx`         | ✅ Built        |
 | Blog            | `/blog`      | `BlogPage.tsx`           | ✅ Built        |
+| Blog Post       | `/blog/:slug`| `BlogPostPage.tsx`       | ✅ Built        |
 | Gallery         | `/gallery`   | `GalleryPage.tsx`        | ✅ Built        |
 | FAQ             | `/faq`       | `FAQPage.tsx`            | ✅ Built        |
 | Contact         | `/contact`   | `ContactPage.tsx`        | ✅ Built        |

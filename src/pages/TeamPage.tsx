@@ -1,24 +1,24 @@
 import { Link } from 'react-router-dom';
 import { Code2 } from 'lucide-react';
 
-const assetBase = 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets';
+const assetBase = '/assets';
 
 const teamMembers = [
   { name: 'Hongpeng Wei', role: 'President & Co-Founder', background: 'Ex-Computing @ VJC', skills: 'Python, AI', image: '' },
-  { name: 'Brian Lim', role: 'VP, COO & Co-Founder', background: 'Ex-Computing @ VJC', skills: 'Python, ML', image: `${assetBase}/brian_profile.jpeg` },
-  { name: 'Pratik Ghosh', role: 'Head of Curriculum', background: 'Ex-CS @ SP', skills: 'Python, AI', image: `${assetBase}/pratik_profile.jpeg` },
-  { name: 'Yixiang Fan', role: 'Head of Python', background: 'Ex-Computing @ HCI', skills: 'Python, SQL', image: `${assetBase}/yixiang_profile.jpeg` },
-  { name: 'Papangkorn Wangchochedkun', role: 'Head of Curriculum and AI/ML', background: 'CS @ NUS', skills: 'Python, AI', image: `${assetBase}/pann_profile.jpeg` },
-  { name: 'Raghav Sriram', role: 'Python, Robotics & Quantum Computing', background: 'Ex-Computing @ VJC', skills: 'C++, Cybersecurity', image: `${assetBase}/raghav_profile.jpeg` },
-  { name: 'Apicha Maneerat', role: 'Python', background: 'Maths & CS @ NUS', skills: 'Python, Algorithms', image: `${assetBase}/suki_profile.jpeg` },
-  { name: 'Neil Bhandari', role: 'Python', background: 'Ex-Computing @ VJC', skills: 'Python, ML', image: `${assetBase}/neil_profile.jpeg` },
-  { name: 'Ashton Too', role: 'Python', background: 'Ex-Computing @ VJC', skills: 'Python, C#', image: `${assetBase}/ashton_profile.jpeg` },
-  { name: 'Nicholas Yeo', role: 'Python', background: 'Ex-Computing @ VJC', skills: 'Python, AI', image: `${assetBase}/nicholas_profile.jpeg` },
-  { name: 'Kevin Chua', role: 'Python', background: 'Ex-Computing @ VJC', skills: 'Python, SQL', image: `${assetBase}/kevin_profile.jpeg` },
-  { name: 'Chee Heng Seow', role: 'Python', background: 'Ex-Computing @ HCI', skills: 'Python, AI', image: `${assetBase}/cheeheng_profile.jpeg` },
-  { name: 'Joel Lim', role: 'Python', background: 'Ex-Cybersecurity @ NYP', skills: 'Python, Security', image: `${assetBase}/joel_profile.jpeg` },
-  { name: 'Renae Gan', role: 'C and C#', background: 'Engineering @ NP', skills: 'C#, SQL', image: `${assetBase}/renae_profile.jpeg` },
-  { name: 'Boon How Low', role: 'Python', background: 'AI For Science @ NTU', skills: 'AI, ML', image: `${assetBase}/boonhow_profile.jpeg` },
+  { name: 'Brian Lim', role: 'VP, COO & Co-Founder', background: 'Ex-Computing @ VJC', skills: 'Python, ML', image: `${assetBase}/brian_profile.webp` },
+  { name: 'Pratik Ghosh', role: 'Head of Curriculum', background: 'Ex-CS @ SP', skills: 'Python, AI', image: `${assetBase}/pratik_profile.webp` },
+  { name: 'Yixiang Fan', role: 'Head of Python', background: 'Ex-Computing @ HCI', skills: 'Python, SQL', image: `${assetBase}/yixiang_profile.webp` },
+  { name: 'Papangkorn Wangchochedkun', role: 'Head of Curriculum and AI/ML', background: 'CS @ NUS', skills: 'Python, AI', image: `${assetBase}/pann_profile.webp` },
+  { name: 'Raghav Sriram', role: 'Python, Robotics & Quantum Computing', background: 'Ex-Computing @ VJC', skills: 'C++, Cybersecurity', image: `${assetBase}/raghav_profile.webp` },
+  { name: 'Apicha Maneerat', role: 'Python', background: 'Maths & CS @ NUS', skills: 'Python, Algorithms', image: `${assetBase}/suki_profile.webp` },
+  { name: 'Neil Bhandari', role: 'Python', background: 'Ex-Computing @ VJC', skills: 'Python, ML', image: `${assetBase}/neil_profile.webp` },
+  { name: 'Ashton Too', role: 'Python', background: 'Ex-Computing @ VJC', skills: 'Python, C#', image: `${assetBase}/ashton_profile.webp` },
+  { name: 'Nicholas Yeo', role: 'Python', background: 'Ex-Computing @ VJC', skills: 'Python, AI', image: `${assetBase}/nicholas_profile.webp` },
+  { name: 'Kevin Chua', role: 'Python', background: 'Ex-Computing @ VJC', skills: 'Python, SQL', image: `${assetBase}/kevin_profile.webp` },
+  { name: 'Chee Heng Seow', role: 'Python', background: 'Ex-Computing @ HCI', skills: 'Python, AI', image: `${assetBase}/cheeheng_profile.webp` },
+  { name: 'Joel Lim', role: 'Python', background: 'Ex-Cybersecurity @ NYP', skills: 'Python, Security', image: `${assetBase}/joel_profile.webp` },
+  { name: 'Renae Gan', role: 'C and C#', background: 'Engineering @ NP', skills: 'C#, SQL', image: `${assetBase}/renae_profile.webp` },
+  { name: 'Boon How Low', role: 'Python', background: 'AI For Science @ NTU', skills: 'AI, ML', image: `${assetBase}/boonhow_profile.webp` },
 ];
 
 export function TeamPage() {

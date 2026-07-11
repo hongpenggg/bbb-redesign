@@ -1,11 +1,13 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight, Search } from 'lucide-react';
 
-const assetBase = 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets';
+const assetBase = '/assets';
 
 const blogPosts = [
   {
     id: 'why-we-founded-bit-by-bit',
+    slug: 'why-we-founded-bit-by-bit',
     title: 'Why We Founded Bit by Bit Coding',
     excerpt: 'On equity in coding education, opening doors, and how we got there.',
     author: 'Hongpeng Wei',
@@ -13,10 +15,11 @@ const blogPosts = [
     readTime: '8 min read',
     category: 'Opinion',
     tags: ['#student-stories', '#equity', '#events'],
-    image: `${assetBase}/bootcamp_photo.jpeg`,
+    image: `${assetBase}/bootcamp_photo.webp`,
   },
   {
     id: 'march-2026-bootcamp-recap',
+    slug: 'march-2026-bootcamp-recap',
     title: 'March 2026 Bootcamp Recap',
     excerpt: 'Our first bootcamp brought together aspiring coders from all over Singapore.',
     author: 'Brian Lim',
@@ -24,10 +27,11 @@ const blogPosts = [
     readTime: '5 min read',
     category: 'Events',
     tags: ['#bootcamp', '#events'],
-    image: `${assetBase}/wework_class_term1.jpeg`,
+    image: `${assetBase}/wework_class_term1.webp`,
   },
   {
     id: 'teaching-python-to-beginners',
+    slug: 'teaching-python-to-beginners',
     title: 'Teaching Python to Complete Beginners',
     excerpt: 'What we learned from our first cohort of students who had never coded before.',
     author: 'Pratik Ghosh',
@@ -35,7 +39,7 @@ const blogPosts = [
     readTime: '6 min read',
     category: 'Curriculum',
     tags: ['#curriculum', '#python', '#teaching'],
-    image: `${assetBase}/kevin_teaching.jpeg`,
+    image: `${assetBase}/kevin_teaching.webp`,
   },
 ];
 
@@ -110,9 +114,10 @@ export function BlogPage() {
       <section className="px-4 sm:px-6 pb-16 md:pb-20 max-w-container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {filteredPosts.map((post, i) => (
-            <article
+            <Link
               key={post.id}
-              className={`bg-surface wiggly-border hard-shadow hover-wiggle flex flex-col transform ${
+              to={`/blog/${post.slug}`}
+              className={`bg-surface wiggly-border hard-shadow hover-wiggle flex flex-col transform group ${
                 i % 3 === 0 ? 'rotate-1' : i % 3 === 2 ? '-rotate-1' : ''
               }`}
             >
@@ -120,7 +125,7 @@ export function BlogPage() {
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 bg-primary text-on-primary text-[11px] font-label font-bold wiggly-border-thin">
@@ -129,7 +134,7 @@ export function BlogPage() {
                 </div>
               </div>
               <div className="p-5 md:p-6 flex flex-col flex-grow">
-                <h3 className="font-display text-[16px] md:text-[18px] font-bold text-ink-black mb-2 hover:text-primary transition-colors">
+                <h3 className="font-display text-[16px] md:text-[18px] font-bold text-ink-black mb-2 group-hover:text-primary transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-on-surface-variant text-[12px] md:text-[13px] mb-4 flex-grow line-clamp-3 leading-relaxed">
@@ -146,10 +151,10 @@ export function BlogPage() {
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-primary" />
+                  <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
         {filteredPosts.length === 0 && (
