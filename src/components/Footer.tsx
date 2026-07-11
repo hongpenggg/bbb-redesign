@@ -62,7 +62,7 @@ export function Footer() {
                 <Github className="w-3.5 h-3.5 md:w-4 md:h-4" />
               </a>
               <a
-                href="https://linkedin.com/company/bitbybitcoding"
+                href="https://linkedin.com/company/bbbcoding"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 md:w-10 md:h-10 wiggly-border hard-shadow-sm flex items-center justify-center text-ink-black hover:text-primary hover-wiggle transition-colors"
@@ -70,7 +70,7 @@ export function Footer() {
                 <Linkedin className="w-3.5 h-3.5 md:w-4 md:h-4" />
               </a>
               <a
-                href="https://twitter.com/bbbcoding"
+                href="https://x.com/bbbcoding"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 md:w-10 md:h-10 wiggly-border hard-shadow-sm flex items-center justify-center text-ink-black hover:text-primary hover-wiggle transition-colors"
