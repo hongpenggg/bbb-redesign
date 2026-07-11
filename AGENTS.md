@@ -172,7 +172,7 @@ rounded-sketch        → 255px 15px 225px 15px/15px 225px 15px 255px
 ### Images
 
 - All BBB event/class photos are stored locally in `public/assets/` as `.webp` files.
-- Reference them using the path prefix `/assets/<filename>.webp` in `src` / `alt` attributes.
+- Reference them using the path prefix `/assets/<filename>.webp` in `src` attributes.
 - The `assetBase` constant pattern is used in page components: `const assetBase = '/assets';`
 - Use `alt` attributes on every `<img>` tag.
 
