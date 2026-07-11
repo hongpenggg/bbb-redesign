@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Puzzle, Brush, Users, ArrowRight, Sparkles } from 'lucide-react';
 
-const assetBase = 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets';
+const assetBase = '/assets';
 
 export function AboutPage() {
   return (
@@ -40,7 +40,7 @@ export function AboutPage() {
             <img
               alt="Suki teaching at whiteboard"
               className="w-full h-auto object-cover wiggly-border-thin"
-              src={`${assetBase}/suki_teaching_whiteboard.jpeg`}
+              src={`${assetBase}/suki_teaching_whiteboard.webp`}
             />
           </div>
         </div>

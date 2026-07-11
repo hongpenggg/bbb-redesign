@@ -71,7 +71,7 @@ const partnerLogos = [
   'Club Rainbow', 'NVPC', 'Temasek Foundation', 'Tote Board',
 ];
 
-const assetBase = 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets';
+const assetBase = '/assets';
 
 export function HomePage() {
   return (
@@ -132,7 +132,7 @@ export function HomePage() {
             <img
               alt="Bit by Bit Coding session"
               className="w-full h-auto object-cover wiggly-border-thin"
-              src={`${assetBase}/bootcamp_photo.jpeg`}
+              src={`${assetBase}/bootcamp_photo.webp`}
             />
           </div>
         </div>
@@ -189,7 +189,7 @@ export function HomePage() {
               <img
                 alt="Students learning to code"
                 className="w-full h-auto object-cover wiggly-border-thin"
-                src={`${assetBase}/wework_class_brianteaching_term1.jpeg`}
+                src={`${assetBase}/wework_class_brianteaching_term1.webp`}
               />
             </div>
             <div className="absolute -top-4 -right-4 w-16 h-16 md:w-20 md:h-20 bg-bit-green organic-blob-2 -z-10" />

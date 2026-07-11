@@ -1,41 +1,41 @@
 const eventImages = [
-  'scape_class_term1.jpeg',
-  'wework_class_brianteaching_term1.jpeg',
-  'wework_class_nicholasguiding_term1.jpeg',
-  'wework_class_term1.jpeg',
-  'scape_class_pannteaching_term1.jpeg',
-  'wework_class_frombackleft_term1.jpeg',
-  'scape_class_pannbrianselfie_term1.jpeg',
-  'wework_class_frombackmiddle_term1.jpeg',
-  'wework_class_nicholastutoringcloseup_term1.jpeg',
-  'wework_class_frombackright_term1.jpeg',
-  'scape_class_frombackmiddle_term1.jpeg',
-  'wework_class_frombackright2_term1.jpeg',
-  'scape_class_pannteachingzoomed_term1.jpeg',
-  'wework_class_pratikteachingzoomed_term1.jpeg',
-  'csm_class_frombackleft_term1.jpeg',
-  'bootcamp_photo.jpeg',
-  'kevin_teaching.jpeg',
-  'suki_teaching_whiteboard.jpeg',
-  'tutor_debate_session.jpeg',
-  'zoomed_in_kevin_teaching.jpeg',
-  'wework_class_wholepanel_term1.jpeg',
-  'wework_class_mrchriszoomed_term1.jpeg',
-  'wework_class_panelfrombackright_term1.jpeg',
-  'wework_class_hackathonfrombackleft_term1.jpeg',
-  'wework_class_mrridzwandiscussionzoomed_term1.jpeg',
-  'wework_class_hackathongroupzoomed_term1.jpeg',
-  'wework_class_mrridzwanzoomed_term1.jpeg',
-  'wework_class_panelfrombackleft_term1.jpeg',
-  'wework_class_panelhongpengzoomed_term1.jpeg',
+  'scape_class_term1.webp',
+  'wework_class_brianteaching_term1.webp',
+  'wework_class_nicholasguiding_term1.webp',
+  'wework_class_term1.webp',
+  'scape_class_pannteaching_term1.webp',
+  'wework_class_frombackleft_term1.webp',
+  'scape_class_pannbrianselfie_term1.webp',
+  'wework_class_frombackmiddle_term1.webp',
+  'wework_class_nicholastutoringcloseup_term1.webp',
+  'wework_class_frombackright_term1.webp',
+  'scape_class_frombackmiddle_term1.webp',
+  'wework_class_frombackright2_term1.webp',
+  'scape_class_pannteachingzoomed_term1.webp',
+  'wework_class_pratikteachingzoomed_term1.webp',
+  'csm_class_frombackleft_term1.webp',
+  'bootcamp_photo.webp',
+  'kevin_teaching.webp',
+  'suki_teaching_whiteboard.webp',
+  'tutor_debate_session.webp',
+  'zoomed_in_kevin_teaching.webp',
+  'wework_class_wholepanel_term1.webp',
+  'wework_class_mrchriszoomed_term1.webp',
+  'wework_class_panelfrombackright_term1.webp',
+  'wework_class_hackathonfrombackleft_term1.webp',
+  'wework_class_mrridzwandiscussionzoomed_term1.webp',
+  'wework_class_hackathongroupzoomed_term1.webp',
+  'wework_class_mrridzwanzoomed_term1.webp',
+  'wework_class_panelfrombackleft_term1.webp',
+  'wework_class_panelhongpengzoomed_term1.webp',
 ];
 
-const assetBase = 'https://raw.githubusercontent.com/bitbybitcoding/web/main/.github/assets';
+const assetBase = '/assets';
 
 function formatAlt(image: string) {
   return image
     .replace(/_/g, ' ')
-    .replace('.jpeg', '')
+    .replace('.webp', '')
     .replace('term1', 'Term 1')
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
