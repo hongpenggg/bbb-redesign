@@ -1,49 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight, Search } from 'lucide-react';
-
-const assetBase = '/assets';
-
-const blogPosts = [
-  {
-    id: 'why-we-founded-bit-by-bit',
-    slug: 'why-we-founded-bit-by-bit',
-    title: 'Why We Founded Bit by Bit Coding',
-    excerpt: 'On equity in coding education, opening doors, and how we got there.',
-    author: 'Hongpeng Wei',
-    date: 'January 2026',
-    readTime: '8 min read',
-    category: 'Opinion',
-    tags: ['#student-stories', '#equity', '#events'],
-    image: `${assetBase}/bootcamp_photo.webp`,
-  },
-  {
-    id: 'march-2026-bootcamp-recap',
-    slug: 'march-2026-bootcamp-recap',
-    title: 'March 2026 Bootcamp Recap',
-    excerpt: 'Our first bootcamp brought together aspiring coders from all over Singapore.',
-    author: 'Brian Lim',
-    date: 'March 2026',
-    readTime: '5 min read',
-    category: 'Events',
-    tags: ['#bootcamp', '#events'],
-    image: `${assetBase}/wework_class_term1.webp`,
-  },
-  {
-    id: 'teaching-python-to-beginners',
-    slug: 'teaching-python-to-beginners',
-    title: 'Teaching Python to Complete Beginners',
-    excerpt: 'What we learned from our first cohort of students who had never coded before.',
-    author: 'Pratik Ghosh',
-    date: 'April 2026',
-    readTime: '6 min read',
-    category: 'Curriculum',
-    tags: ['#curriculum', '#python', '#teaching'],
-    image: `${assetBase}/kevin_teaching.webp`,
-  },
-];
-
-const allCategories = ['All', 'Opinion', 'Events', 'Curriculum'];
+import { blogPosts, allCategories } from '../data/blogPosts';
 
 export function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('');
