@@ -13,10 +13,10 @@ import {
 } from 'lucide-react';
 
 const stats = [
-  { number: '75%', label: 'First-time coders', icon: Users },
+  { number: '80%', label: 'First-time coders', icon: Users },
   { number: '100%', label: 'Increased confidence', icon: Heart },
-  { number: '85%', label: 'Want to continue', icon: Star },
-  { number: '90%', label: 'Rated lessons clear', icon: GraduationCap },
+  { number: '87%', label: 'Want to continue', icon: Star },
+  { number: '93%', label: 'More likely to pursue coding', icon: GraduationCap },
 ];
 
 const testimonials = [
@@ -25,16 +25,24 @@ const testimonials = [
     author: 'Student, March 2026 Cohort',
   },
   {
-    quote: 'I did not know that coding was easy to pick up and I can create my own games.',
-    author: 'Student, March 2026 Cohort',
+    quote: 'I went from no knowledge to actually being able to code something simple.',
+    author: 'Student, April 2026 Cohort',
   },
   {
     quote: 'The tutors were very friendly and helpful! They were very welcoming and clear in explaining.',
     author: 'Student, March 2026 Cohort',
   },
   {
-    quote: 'After learning the basics I am more excited to try harder challenges.',
-    author: 'Student, March 2026 Cohort',
+    quote: 'It really helped build my foundation in Python and the basic concepts. The practice questions provided the means for me to apply these concepts into actual questions.',
+    author: 'Student, April 2026 Cohort',
+  },
+  {
+    quote: 'It is a great way to start learning code with zero background. The tutors are really dedicated and patient in helping us. They always ensure that everyone in the class understands what they are explaining.',
+    author: 'Student, April 2026 Cohort',
+  },
+  {
+    quote: 'Compared to self-learning, learning under the guidance of an experienced mentor with a structured roadmap helps me to stay on the right track.',
+    author: 'Student, April 2026 Cohort',
   },
 ];
 
@@ -87,7 +95,7 @@ export function HomePage() {
             <span className="drawn-underline text-primary">every youth</span>.
           </h1>
           <p className="text-on-surface-variant text-[16px] md:text-[18px] leading-relaxed">
-            Free, structured, multi-year coding pathways for youths aged 10–18. We believe learning to code is a right, not a privilege.
+            Free, structured, multi-year coding pathways for youths aged 13–22. We believe learning to code is a right, not a privilege.
           </p>
           <div className="mt-1 md:mt-2 flex flex-wrap gap-3 md:gap-4">
             <span className="bg-bit-green text-ink-black font-label font-bold px-3 md:px-4 py-1.5 md:py-2 organic-blob-1 border-2 border-ink-black transform -rotate-2 text-[12px] md:text-[14px]">
@@ -143,7 +151,7 @@ export function HomePage() {
         <div className="max-w-container mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="font-display text-[24px] md:text-headline-lg text-ink-black">
-              March 2026 Cohort Impact
+              April-June 2026 Cohort Impact
             </h2>
             <p className="text-on-surface-variant text-[13px] md:text-[14px] mt-2">n=20 students surveyed</p>
           </div>
