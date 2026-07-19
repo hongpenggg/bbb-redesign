@@ -153,7 +153,7 @@ export function HomePage() {
             <h2 className="font-display text-[24px] md:text-headline-lg text-ink-black">
               April-June 2026 Cohort Impact
             </h2>
-            <p className="text-on-surface-variant text-[13px] md:text-[14px] mt-2">n=20 students surveyed</p>
+            <p className="text-on-surface-variant text-[13px] md:text-[14px] mt-2">n=15 students surveyed</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, i) => (
