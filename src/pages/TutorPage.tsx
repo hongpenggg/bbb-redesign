@@ -157,7 +157,7 @@ export function TutorPage() {
               </h3>
               <div className="space-y-4 text-on-surface-variant text-[13px] md:text-[14px] leading-relaxed">
                 <p>
-                  <strong className="text-ink-black">Sessions:</strong> Saturdays, approximately 2-3 hours per session
+                  <strong className="text-ink-black">Sessions:</strong> Saturdays, approximately 3-4 hours per session
                 </p>
                 <p>
                   <strong className="text-ink-black">Term length:</strong> 10-12 weeks per term
